@@ -11,19 +11,19 @@
     <h1>Explicación de elementos compuestos LaunchX</h1>
     <!--De esta forma -->
     <!-- Labels / Etiquetas -->
-    <!--La etiqueta de LABEL se utiliza para etiquetar un elemento de tal forma que en la interfaz 
-        sea visible. Esta siempre ira asociada en algun objeto, y puede exisitr en cualquier lugar 
+    <!--La etiqueta de LABEL se utiliza para etiquetar un elemento de tal forma que en la interfaz
+        sea visible. Esta siempre ira asociada en algun objeto, y puede exisitr en cualquier lugar
         arrededor del objeto asociado.-->
     <label for="Input1"> Ingrese su Nombre</label>
     <br>
     <!-- Entradas / Inputs -->
-    <!--La etiqueta INPUT nos generara un recuadro para poder ingresar informacion. Nosotros podemos 
-        especificar el tipo de texto que queremos ingresar en ese recuadro, para esto utilizamos el 
-        atributo TYPE. 
+    <!--La etiqueta INPUT nos generara un recuadro para poder ingresar informacion. Nosotros podemos
+        especificar el tipo de texto que queremos ingresar en ese recuadro, para esto utilizamos el
+        atributo TYPE.
         Por otro lado, tenemos dos atributos mas, el ID y NAME, estos atributos nos ayudaran a
         identificar a que objeto nos estamos refiriendo, y es muy util cuando tenemos muchas etiquetas
         del mismo tipo.
-        Es importante mencionar que podemos hacer uso de los atrinutos ID y NAME en cualquier tipo de 
+        Es importante mencionar que podemos hacer uso de los atrinutos ID y NAME en cualquier tipo de
         etiqueta u objeto en HTML-->
     <input type="text" id="Input1" name="Input1">
     <!--La etiqueta BR (break) produce un salto de linea en el texto-->
@@ -51,15 +51,35 @@
     <hr>
 
     <h2>Input de selección multiple</h2><br>
+    <!--Este es otro tipo de imput, sin embargo seguimos teniendo la misma
+        etiqueta para indicar que ingresaremos algun tipo de informacion
+        INPUT, sin emargo en la propiedad TYPE cambiamos a checkbox para
+        ocaciones en que tengamos que eleir entre una o mas opciones.-->
+    <!--Por otro lado,vemos que tenemos las propiedades NAME, y VALUE
+        que son globales. Por otro lado tenemos una nueva propiedad que es
+        VALUE, Que indicara que si se marca esa casilla, tendra el valor de
+        cebolla.-->
     <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+    <!--Como mencionamos en la primera seccion, podemos asociar una etiqueta
+        que sea visible para el usuario a cualquier objeto, esto lo hacemos
+        con la ayuda de la propiedad FOR. Como vemos, la etiqueta label
+        la estamos asociado al objeto con nombre TOPPING1 y dicho objeto
+        es un input de tipo CHECKBOX-->
     <label for="topping1">Tacos con Cebolla</label><br>
     <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
     <label for="topping2">Tacos con Cilantro</label><br>
     <input type="checkbox" id="topping3" name="topping3" value="Salsa">
     <label for="topping3">Tacos con Salsa</label><br><br>
 
+
     <h2>Input de selección única</h2><br>
+    <!--Tenemos practicamente la misma estructura que con los objes de tipo
+        checkbox, sin embargo cambia el tipo, que en este caso son RADIO.
+        Lo que significa esto es que nos delimitan a elegir una sola opcion-->
     <input type="radio" id="roja" name="salsas" value="Roja">
+    <!--Igual que en la estructura anterior, asociamos una etiqueta a cada unos
+        de los objetos de tipo RADIO, para dar informacion al usuario de lo que
+        debe de proporcionar.-->
     <label for="roja">Roja</label><br>
     <input type="radio" id="verde" name="salsas" value="Verde">
     <label for="verde">Verde</label><br>
@@ -68,7 +88,13 @@
 
     <h2>Select</h2>
     <label for="tacos">De que la orden</label>
+    <!--Con la etiqueta SELECT le damos al usario otra forma de visualizar una 
+        lista delimitada de opciones a escoger, atraves de un menu de opciones.
+        Las opciones contenidas dentro del menu son representadas por elementos
+        con la etiqueta OPTION.-->
     <select id="tacos" name="tacos">
+        <!--Con la etiqueta OPTION mostramos las opciones contenidas dentro de
+            nuestro menu. Definimos su valor para el programa con VALUE. -->
         <option value="suadero">Suadero</option>
         <option value="pastor">Pastor</option>
         <option value="campechanos">Campechanos</option>
@@ -76,9 +102,14 @@
     </select>
 
     <h2>Select con Input</h2>
-    <label for="refresco">Elige tu refresco favorito</label><br>
     <input list="refresco">
+    <label for="refresco">Elige tu refresco favorito</label><br>
+    <!--La etiqueta DATALIST es otra forma de delimitar las opciones que tine 
+        y puede escoger un usuro al momento de ingresar datos a la pagina,
+        motrando unicamente los valores de cada indice de nuestra tabla.-->
     <datalist id="refresco">
+        <!--Al igual que con SELECT cada uno de los elementos dentro de nuestra
+            tabla estara definido por la etiqueta OPTION-->
         <option value="Coca-Cola">
         <option value="Manzana">
         <option value="Naranja">
